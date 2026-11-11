@@ -1,0 +1,265 @@
+/*
+ * BYTEFORGE - BLUE COLOR THEME ONLY
+ * Palet warna: Navy, royal blue, dan cool white.
+ * File ini hanya mengubah warna, bukan ukuran, layout, font, atau posisi elemen.
+ * Tambahkan setelah stylesheet utama di setiap halaman HTML.
+ */
+
+:root {
+  --bf-navy: #102A43;
+  --bf-navy-soft: #1D4265;
+  --bf-blue: #2563EB;
+  --bf-blue-dark: #1D4ED8;
+  --bf-blue-light: #EAF2FF;
+  --bf-text: #243B53;
+  --bf-muted: #627D98;
+  --bf-white: #FFFFFF;
+  --bf-surface: #F1F6FC;
+  --bf-border: #D9E4F0;
+}
+
+/* Warna dasar website */
+body,
+#wrapper,
+#main,
+#main > .inner,
+#main > .inner > section,
+.posts article,
+.features article,
+.modal-content {
+  background-color: var(--bf-white);
+  color: var(--bf-text);
+}
+
+body,
+p,
+.posts article p,
+.features article .content p,
+#sidebar p,
+.mini-posts article p,
+.modal-content p {
+  color: var(--bf-muted);
+}
+
+/* Judul dan teks penting */
+h1, h2, h3, h4, h5, h6,
+#banner .content header h1,
+#header .logo,
+header.major h2,
+header.main h1,
+.features article .content h3,
+.posts article h3,
+.modal-content h2 {
+  color: var(--bf-navy);
+}
+
+/* Header atas dan ikon sosial */
+#header {
+  border-bottom-color: var(--bf-border);
+}
+
+#header .logo strong {
+  color: var(--bf-blue-dark);
+}
+
+#header .icons li a {
+  color: var(--bf-navy-soft);
+}
+
+#header .icons li a:hover {
+  color: var(--bf-blue);
+}
+
+/* Hero / banner */
+#banner .content header p {
+  color: var(--bf-blue-dark);
+}
+
+#banner .content > p {
+  color: var(--bf-muted);
+}
+
+#banner .image {
+  background-color: var(--bf-surface);
+  border-color: var(--bf-border);
+}
+
+/* Link */
+a {
+  color: var(--bf-blue-dark);
+}
+
+a:hover {
+  color: var(--bf-navy);
+}
+
+/* Tombol */
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  color: var(--bf-blue-dark) !important;
+  background-color: transparent;
+  border-color: var(--bf-blue) !important;
+}
+
+.button:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover {
+  color: var(--bf-white) !important;
+  background-color: var(--bf-blue) !important;
+  border-color: var(--bf-blue) !important;
+}
+
+/* Garis dan judul section */
+#main > .inner > section {
+  border-top-color: var(--bf-border);
+}
+
+header.major h2 {
+  border-bottom-color: var(--bf-blue);
+}
+
+/* Kartu fitur */
+.features article {
+  background-color: var(--bf-white);
+  border-color: var(--bf-border);
+}
+
+.features article:hover {
+  border-color: var(--bf-blue);
+}
+
+.features article .icon {
+  color: var(--bf-blue);
+  background-color: var(--bf-blue-light);
+}
+
+/* Kartu artikel */
+.posts article {
+  background-color: var(--bf-white);
+  border-color: var(--bf-border);
+}
+
+.posts article:hover {
+  border-color: var(--bf-blue);
+}
+
+.posts article > .image {
+  background-color: var(--bf-surface);
+}
+
+/* Sidebar */
+#sidebar {
+  background-color: var(--bf-surface);
+  border-left-color: var(--bf-border);
+}
+
+#sidebar section {
+  border-top-color: var(--bf-border);
+}
+
+#sidebar header.major h2 {
+  color: var(--bf-navy);
+  border-bottom-color: var(--bf-blue);
+}
+
+#menu > ul > li {
+  border-top-color: var(--bf-border);
+}
+
+#menu > ul > li > a,
+#menu > ul > li > span {
+  color: var(--bf-navy-soft);
+}
+
+#menu > ul > li > a:hover,
+#menu > ul > li > span:hover {
+  color: var(--bf-blue-dark);
+}
+
+#menu ul ul li a {
+  color: var(--bf-muted);
+}
+
+/* Pencarian */
+#search input[type="text"] {
+  color: var(--bf-text);
+  background-color: var(--bf-white);
+  border-color: var(--bf-border);
+}
+
+#search input[type="text"]:focus {
+  border-color: var(--bf-blue);
+}
+
+/* Informasi tambahan */
+.mini-posts article {
+  border-bottom-color: var(--bf-border);
+}
+
+.mini-posts .image {
+  background-color: var(--bf-border);
+}
+
+/* Kontak */
+#sidebar .contact li {
+  color: var(--bf-muted);
+}
+
+#sidebar .contact li:before {
+  color: var(--bf-blue);
+}
+
+#sidebar .contact a {
+  color: var(--bf-navy-soft);
+}
+
+#sidebar .contact a:hover {
+  color: var(--bf-blue-dark);
+}
+
+/* Modal */
+.modal-overlay {
+  background-color: rgba(12, 31, 54, 0.74);
+}
+
+.modal-content {
+  background-color: var(--bf-white);
+  border-color: var(--bf-border);
+}
+
+.modal-close {
+  color: var(--bf-muted);
+}
+
+.modal-close:hover {
+  color: var(--bf-blue-dark);
+  background-color: var(--bf-blue-light);
+}
+
+/* Input umum */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+  color: var(--bf-text);
+  background-color: var(--bf-white);
+  border-color: var(--bf-border);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--bf-blue) !important;
+}
+
+/* Highlight teks */
+::selection {
+  color: var(--bf-white);
+  background-color: var(--bf-blue);
+}

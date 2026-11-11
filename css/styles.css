@@ -1805,13 +1805,13 @@ progress {
 
 .table-primary {
   --bs-table-color: #000;
-  --bs-table-bg: #fde0d8;
-  --bs-table-border-color: #e4cac2;
-  --bs-table-striped-bg: #f0d5cd;
+  --bs-table-bg: #d8eefd;
+  --bs-table-border-color: #c2d4e4;
+  --bs-table-striped-bg: #cde0f0;
   --bs-table-striped-color: #000;
-  --bs-table-active-bg: #e4cac2;
+  --bs-table-active-bg: #c2d6e4;
   --bs-table-active-color: #000;
-  --bs-table-hover-bg: #eacfc8;
+  --bs-table-hover-bg: #c8deea;
   --bs-table-hover-color: #000;
   color: var(--bs-table-color);
   border-color: var(--bs-table-border-color);
@@ -2340,7 +2340,7 @@ textarea.form-control-lg {
   width: 1rem;
   height: 1rem;
   margin-top: -0.25rem;
-  background-color: #f4623a;
+  background-color: #1D4ED8;
   border: 0;
   border-radius: 1rem;
   -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -2369,7 +2369,7 @@ textarea.form-control-lg {
 .form-range::-moz-range-thumb {
   width: 1rem;
   height: 1rem;
-  background-color: #f4623a;
+  background-color: #1D4ED8;
   border: 0;
   border-radius: 1rem;
   -moz-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
