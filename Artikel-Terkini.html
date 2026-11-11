@@ -1,148 +1,397 @@
+
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>Dibuat Oleh Kelompok 1</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="css/color-custom.css" />
-	</head>
-	<body class="is-preload">
+<head>
+    <title>Artikel Terkini - Dibuat oleh kelompok 13</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+    <link rel="stylesheet" href="assets/css/main.css" />
 
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
+    <style>
+        body {
+            background: #ffffff;
+            color: #3d4449;
+        }
 
-							<!-- Header -->
-								<header id="header">
-									<a href="index.html" class="logo"><strong>Dibuat Oleh </strong>Kelompok 13</a>
-									<ul class="icons">
-										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
-										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
-									</ul>
-								</header>
+        #wrapper {
+            width: 100%;
+        }
 
-							<!-- Content -->
-								<section>
-									<header class="main">
-										<h1>Artikel Terkini</h1>
-									</header>
+        #main {
+            width: 100%;
+        }
 
-									<span class="image main"><img src="images/pic11.jpg" alt="" /></span>
+        #main .inner {
+            padding: 0 28px;
+        }
 
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit.</p>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
-									<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
+        /* HEADER */
+        #header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 6px solid #f56a6a;
+        }
 
-									<hr class="major" />
+        #header .logo {
+            font-size: 17px;
+            color: #7f888f;
+        }
 
-									<h2>Interdum sed dapibus</h2>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit.</p>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
+        #header .logo strong {
+            color: #3d4449;
+        }
 
-									<hr class="major" />
+        #header .icons {
+            display: flex;
+            gap: 20px;
+        }
 
-									<h2>Magna etiam veroeros</h2>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
-									<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
+        #header .icons a {
+            color: #7f888f;
+        }
 
-									<hr class="major" />
+        /* KONTEN ARTIKEL */
+        .article-content {
+            padding-top: 75px;
+            padding-bottom: 40px;
+        }
 
-									<h2>Lorem aliquam bibendum</h2>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit.</p>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
+        .article-content h1 {
+            font-size: 3.5em;
+            font-weight: 700;
+            color: #3d4449;
+            margin-bottom: 100px;
+        }
 
-								</section>
+        .article-content h2 {
+            font-size: 2em;
+            font-weight: 700;
+            color: #3d4449;
+            margin-top: 60px;
+            margin-bottom: 35px;
+        }
 
-						</div>
-					</div>
+        .article-content h3 {
+            font-size: 1.3em;
+            color: #3d4449;
+            margin-bottom: 15px;
+        }
 
-				<!-- Sidebar -->
-					<div id="sidebar">
-						<div class="inner">
+        .article-content p {
+            font-size: 17px;
+            line-height: 1.9;
+            color: #7f888f;
+            margin-bottom: 38px;
+        }
 
-							<!-- Search -->
-								<section id="search" class="alt">
-									<form method="post" action="#">
-										<input type="text" name="query" id="query" placeholder="Search" />
-									</form>
-								</section>
+        .article-content hr {
+            border: 0;
+            border-top: 1px solid #dddddd;
+            margin: 60px 0;
+        }
 
-							<!-- Menu -->
-								<nav id="menu">
-									<header class="major">
-										<h2>Menu</h2>
-									</header>
-									<ul>
-										<li><a href="index.html">Beranda</a></li>
-										<li><a href="Artikel-Terkini.html">Artikel Terkini</a></li>
-										<li><a href="Catatan-Developer.html">Catatan Developer</a></li>
-										<li>
-											<span class="opener">Kategori Topik</span>
-											<ul>
-												<li><a href="#">Web Development</a></li>
-												<li><a href="#">Administrasi Server</a></li>
-												<li><a href="#">Struktur Data & Algoritma</a></li>
-											</ul>
-										</li>
+        /* GAMBAR ARTIKEL */
+        .article-image {
+            width: 100%;
+            margin-bottom: 35px;
+        }
 
-									</ul>
-								</nav>
+        .article-image img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
 
-							<!-- Section -->
-								<section>
-									<header class="major">
-										<h2>Informasi Tambahan</h2>
-									</header>
-									<div class="mini-posts">
-										<article>
-											<a href="#" class="image"><img src="images/Modern-Web-Design-Trends.jpg" alt="" /></a>
-											<p>Deskripsinya Nanti</p>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/Modern-Web-Design-Trends.jpg" alt="" /></a>
-											<p>Deskripsinya Nanti</p>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/Modern-Web-Design-Trends.jpg" alt="" /></a>
-											<p>Deskripsinya Nanti</p>
-										</article>
-									</div>
-									<ul class="actions">
-										<li><a href="#" class="button">More</a></li>
-									</ul>
-								</section>
+        /* SIDEBAR DISEMBUNYIKAN */
+        #sidebar {
+            display: none !important;
+        }
 
-							<!-- Section -->
-								<section>
-									<header class="major">
-										<h2>Hubungi Saya</h2>
-									</header>
-									<p>Tertarik untuk berkolaborasi dalam proyek web, diskusi seputar dunia IT, atau sekadar bertukar pikiran? Jangan ragu buat sapa atau hubungi aku lewat kontak di bawah ini!.</p>
-									<ul class="contact">
-										<li class="icon solid fa-envelope"><a href="#">2515061033@students.unila.ac.id</a></li>
-										<li class="icon solid fa-phone">(000) 000-0000</li>
-										<li class="icon solid fa-home">Jl. Cemara Indah No. 01<br />
-										Kampung Baru, bandar Lampung</li>
-									</ul>
-								</section>
-						</div>
-					</div>
+        /* RESPONSIVE */
+        @media screen and (max-width: 736px) {
 
-			</div>
+            #main .inner {
+                padding: 0 18px;
+            }
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+            #header {
+                padding: 15px 0;
+            }
 
-	</body>
+            #header .logo {
+                font-size: 14px;
+            }
+
+            #header .icons {
+                gap: 10px;
+            }
+
+            .article-content {
+                padding-top: 45px;
+            }
+
+            .article-content h1 {
+                font-size: 2.3em;
+                margin-bottom: 65px;
+            }
+
+            .article-content h2 {
+                font-size: 1.6em;
+            }
+
+            .article-content p {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body class="is-preload">
+
+<div id="wrapper">
+
+    <!-- MAIN -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- HEADER -->
+            <header id="header">
+                <a href="index.html" class="logo"><strong>Dibuat Oleh </strong>Kelompok 13</a>
+
+                <ul class="icons">
+                    <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                    <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                    <li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
+                    <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                    <li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
+                </ul>
+            </header>
+
+            <!-- ARTIKEL TERKINI -->
+            <section class="article-content">
+
+                <header class="main">
+                    <h1>Artikel Terkini</h1>
+                </header>
+
+                <!-- ARTIKEL PEMBUKA -->
+                <h2>Perkembangan Teknologi Digital di Era Modern</h2>
+
+                <p>
+                    Perkembangan teknologi digital telah membawa perubahan besar
+                    dalam kehidupan manusia. Hampir seluruh aktivitas saat ini
+                    memanfaatkan teknologi, mulai dari komunikasi, pendidikan,
+                    bisnis, hingga industri. Kemajuan teknologi memungkinkan
+                    berbagai pekerjaan dilakukan dengan lebih cepat, mudah,
+                    dan efisien. BYTEFORGE hadir sebagai media informasi yang
+                    membahas berbagai perkembangan teknologi serta memberikan
+                    wawasan kepada pembaca mengenai dunia teknologi informasi.
+                </p>
+
+                <p>
+                    Salah satu perkembangan yang paling terlihat adalah semakin
+                    luasnya penggunaan perangkat lunak dan aplikasi berbasis web.
+                    Website tidak lagi hanya digunakan sebagai media penyampaian
+                    informasi, tetapi juga menjadi sarana transaksi, komunikasi,
+                    pembelajaran, dan pengelolaan data. Oleh karena itu,
+                    pemahaman mengenai teknologi digital menjadi kemampuan
+                    penting yang perlu dimiliki oleh generasi saat ini.
+                </p>
+
+                <p>
+                    Melalui BYTEFORGE, pembaca dapat mempelajari berbagai
+                    konsep teknologi secara bertahap, mulai dari dasar
+                    pemrograman, pengembangan website, pengelolaan database,
+                    hingga perkembangan kecerdasan buatan. Informasi disajikan
+                    dengan bahasa yang mudah dipahami agar dapat membantu
+                    mahasiswa, pelajar, maupun masyarakat umum.
+                </p>
+
+                <hr />
+
+                <!-- ARTIKEL 2 -->
+                <h2>Web Development: Membangun Website Masa Kini</h2>
+
+                <p>
+                    Web Development merupakan proses pembuatan dan pengembangan
+                    sebuah website yang melibatkan berbagai teknologi, bahasa
+                    pemrograman, serta perangkat pendukung. Dalam proses
+                    pengembangan website, terdapat tiga teknologi dasar yang
+                    sering digunakan, yaitu HTML, CSS, dan JavaScript. HTML
+                    berfungsi membangun struktur halaman, CSS digunakan untuk
+                    mengatur tampilan dan desain, sedangkan JavaScript
+                    memberikan interaksi dan fungsi dinamis pada website.
+                </p>
+
+                <p>
+                    Selain teknologi dasar tersebut, pengembang web juga
+                    mengenal berbagai framework dan library seperti Bootstrap,
+                    React, dan Laravel. Penggunaan teknologi tersebut dapat
+                    membantu proses pengembangan menjadi lebih terstruktur
+                    dan efisien. Seorang web developer tidak hanya dituntut
+                    mampu membuat website yang menarik, tetapi juga harus
+                    memperhatikan kenyamanan pengguna, keamanan, kecepatan,
+                    serta kemampuan website dalam menyesuaikan berbagai ukuran
+                    perangkat.
+                </p>
+
+                <p>
+                    Dalam dunia pengembangan web modern, konsep responsive
+                    design menjadi salah satu aspek penting. Website harus
+                    mampu menampilkan konten dengan baik ketika diakses
+                    melalui komputer, laptop, tablet, maupun smartphone.
+                    Dengan memahami dasar-dasar Web Development, seseorang
+                    dapat mulai membangun website pribadi, sistem informasi,
+                    hingga aplikasi berbasis web yang lebih kompleks.
+                </p>
+
+                <hr />
+
+                <!-- ARTIKEL 3 -->
+                <h2>Kecerdasan Buatan (AI) dan Masa Depan Teknologi</h2>
+
+                <p>
+                    Artificial Intelligence atau kecerdasan buatan merupakan
+                    salah satu bidang teknologi yang berkembang sangat pesat.
+                    AI memungkinkan komputer dan mesin melakukan berbagai
+                    tugas yang biasanya membutuhkan kecerdasan manusia,
+                    seperti mengenali gambar, memahami bahasa, menganalisis
+                    informasi, serta memberikan rekomendasi berdasarkan data.
+                </p>
+
+                <p>
+                    Saat ini, teknologi AI telah digunakan dalam berbagai
+                    bidang, termasuk pendidikan, kesehatan, transportasi,
+                    industri, dan bisnis. Contoh penerapannya dapat ditemukan
+                    pada chatbot, asisten virtual, sistem pengenalan wajah,
+                    penerjemah otomatis, serta teknologi generative AI yang
+                    mampu menghasilkan teks, gambar, dan berbagai bentuk
+                    konten digital.
+                </p>
+
+                <p>
+                    Meskipun memberikan banyak manfaat, penggunaan kecerdasan
+                    buatan juga menghadirkan tantangan tersendiri. Masalah
+                    privasi data, keamanan informasi, bias algoritma, dan
+                    ketergantungan terhadap teknologi perlu mendapatkan
+                    perhatian. Oleh sebab itu, pemahaman mengenai cara kerja
+                    AI dan penggunaan teknologi secara bertanggung jawab
+                    menjadi hal yang penting untuk dipelajari.
+                </p>
+
+                <hr />
+
+                <!-- ARTIKEL 4 -->
+                <h2>Database dan Pentingnya Pengelolaan Data</h2>
+
+                <p>
+                    Database atau basis data merupakan kumpulan informasi
+                    yang disimpan dan dikelola secara sistematis sehingga
+                    dapat diakses, diperbarui, dan digunakan sesuai kebutuhan.
+                    Dalam sebuah sistem informasi, database memiliki peran
+                    penting karena hampir seluruh proses pengolahan informasi
+                    membutuhkan penyimpanan data yang terorganisasi.
+                </p>
+
+                <p>
+                    Salah satu konsep yang sering digunakan dalam perancangan
+                    database adalah Entity Relationship Diagram (ERD).
+                    ERD membantu pengembang memahami hubungan antara entitas
+                    dalam sebuah sistem sebelum database diimplementasikan.
+                    Dengan perancangan yang baik, struktur database dapat
+                    dibuat lebih teratur, mengurangi duplikasi data, serta
+                    mempermudah proses pengelolaan informasi.
+                </p>
+
+                <p>
+                    Beberapa sistem manajemen basis data yang banyak digunakan
+                    antara lain MySQL, PostgreSQL, dan Microsoft SQL Server.
+                    Setiap sistem memiliki karakteristik dan keunggulan
+                    masing-masing. Pemilihan database harus disesuaikan
+                    dengan kebutuhan aplikasi, jumlah data, keamanan,
+                    dan kemampuan sistem dalam menangani permintaan pengguna.
+                </p>
+
+                <hr />
+
+                <!-- ARTIKEL 5 -->
+                <h2>Keamanan Siber: Melindungi Data di Dunia Digital</h2>
+
+                <p>
+                    Semakin berkembangnya penggunaan teknologi digital
+                    membuat keamanan informasi menjadi aspek yang sangat
+                    penting. Cyber Security atau keamanan siber merupakan
+                    upaya untuk melindungi sistem komputer, jaringan,
+                    aplikasi, dan data dari ancaman digital yang dapat
+                    menyebabkan kerusakan maupun pencurian informasi.
+                </p>
+
+                <p>
+                    Berbagai ancaman siber dapat terjadi dalam aktivitas
+                    sehari-hari, seperti phishing, malware, ransomware,
+                    pencurian identitas, dan serangan terhadap jaringan.
+                    Ancaman tersebut dapat menargetkan individu maupun
+                    organisasi. Oleh karena itu, pengguna teknologi perlu
+                    memahami cara menjaga keamanan perangkat dan informasi
+                    pribadi.
+                </p>
+
+                <p>
+                    Beberapa langkah sederhana yang dapat dilakukan adalah
+                    menggunakan kata sandi yang kuat, mengaktifkan autentikasi
+                    dua faktor, memperbarui perangkat lunak secara rutin,
+                    menghindari tautan mencurigakan, serta melakukan
+                    pencadangan data. Kesadaran terhadap keamanan digital
+                    merupakan tanggung jawab setiap pengguna teknologi.
+                </p>
+
+                <hr />
+
+                <!-- PENUTUP -->
+                <h2>BYTEFORGE: Belajar Teknologi, Membangun Inovasi</h2>
+
+                <p>
+                    Teknologi akan terus berkembang dan menghadirkan berbagai
+                    peluang baru di masa depan. Kemampuan untuk memahami,
+                    mempelajari, dan memanfaatkan teknologi menjadi salah
+                    satu bekal penting dalam menghadapi perubahan zaman.
+                    Dengan terus meningkatkan pengetahuan dan keterampilan,
+                    setiap orang memiliki kesempatan untuk ikut berkontribusi
+                    dalam perkembangan dunia digital.
+                </p>
+
+                <p>
+                    BYTEFORGE hadir sebagai wadah untuk berbagi pengetahuan
+                    dan informasi seputar teknologi. Melalui berbagai artikel
+                    mengenai Web Development, Artificial Intelligence,
+                    Database, Administrasi Server, dan Keamanan Siber,
+                    diharapkan pembaca dapat memperoleh wawasan baru serta
+                    meningkatkan kemampuan di bidang teknologi informasi.
+                </p>
+
+                <p>
+                    Mari terus belajar, bereksplorasi, dan menciptakan inovasi.
+                    Karena memahami teknologi hari ini merupakan langkah
+                    awal untuk membangun masa depan yang lebih baik.
+                </p>
+
+            </section>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- SCRIPTS -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
 </html>
