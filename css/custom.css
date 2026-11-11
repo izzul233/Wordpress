@@ -26,7 +26,7 @@
     background-color: #ffffff;
     padding: 30px;
     border-radius: 8px;
-    max-width: 550px; /* Ukuran sedang (tidak fullscreen) */
+    max-width: 1000px; /* Ukuran sedang (tidak fullscreen) */
     width: 90%;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     position: relative;

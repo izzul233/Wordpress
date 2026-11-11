@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
     <head>
         <title>Di Buat Oleh Kelompok 13</title>
@@ -8,8 +8,8 @@
             content="width=device-width, initial-scale=1, user-scalable=no"
         />
         <link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="css/styles.css" />
-		<link rel="stylesheet" href="css/custom.css" />
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="css/custom.css" />
     </head>
     <body class="is-preload">
         <!-- Wrapper -->
@@ -77,7 +77,7 @@
                                         onclick="
                                             openModal(
                                                 'Tentang BYTEFORGE',
-                                                'BYTEFORGE adalah blog teknologi yang membahas perkembangan teknologi digital, pemrograman, kecerdasan buatan, hingga konfigurasi server Ubuntu secara praktis.',
+                                                'BYTEFORGE adalah blog teknologi yang membahas perkembangan teknologi digital, pemrograman, kecerdasan buatan, hingga konfigurasi server Ubuntu secara praktis. BYTEFORGE adalah blog teknologi yang membahas perkembangan teknologi digital, pemrograman, kecerdasan buatan (Al), perangkat keras komputer, dan tutorial teknologi. Website ini bertujuan membantu pembaca memahami konsep teknologi melalui artikel yang informatif, praktis, dan mudah dipahami.',
                                             )
                                         "
                                         >LEARN MORE</a
@@ -155,7 +155,17 @@
                         </header>
                         <div class="posts">
                             <article>
-                                <a href="#" class="image"
+                                <a
+                                    href="javascript:void(0)"
+                                    class="image"
+                                    onclick="
+                                        openModal(
+                                            'Linux & Server',
+                                            'Mengenal sistem operasi Linux, perintah terminal, konfigurasi server, dan pengelolaan sistem.',
+                                            'images/terminal.webp',
+                                        )
+                                    "
+                                >
                                     ><img src="/images/terminal.webp" alt=""
                                 /></a>
                                 <h3>Linux & Server</h3>
@@ -165,11 +175,33 @@
                                     pengelolaan sistem.
                                 </p>
                                 <ul class="actions">
-                                    <li><a href="#" class="button">More</a></li>
+                                    <li>
+                                        <a
+                                            href="javascript:void(0)"
+                                            class="button"
+                                            onclick="
+                                                openModal(
+                                                    'Linux & Server',
+                                                    'Pembahasan lengkap mengenai manajemen Ubuntu Server, perintah dasar terminal Linux, konfigurasi Apache web server, dan remote SSH menggunakan PuTTY.',
+                                                )
+                                            "
+                                            >MORE</a
+                                        >
+                                    </li>
                                 </ul>
                             </article>
                             <article>
-                                <a href="#" class="image"
+                                <a
+                                    href="javascript:void(0)"
+                                    class="image"
+                                    onclick="
+                                        openModal(
+                                            'Database & SQL',
+                                            'Materi praktis perancangan basis data relasional, pemodelan ERD, normalisasi tabel, serta eksekusi query DDL dan DML di MySQL/Oracle.',
+                                            'images/database.png',
+                                        )
+                                    "
+                                >
                                     ><img src="/images/database.png" alt=""
                                 /></a>
                                 <h3>Database & SQL</h3>
@@ -178,11 +210,23 @@
                                     ERD, normalisasi, dan penggunaan SQL
                                 </p>
                                 <ul class="actions">
-                                    <li><a href="#" class="button">More</a></li>
+                                    <li>
+                                        <a
+                                            href="javascript:void(0)"
+                                            class="button"
+                                            onclick="
+                                                openModal(
+                                                    'Database & SQL',
+                                                    'Materi praktis perancangan basis data relasional, pemodelan ERD, normalisasi tabel, serta eksekusi query DDL dan DML di MySQL/Oracle.',
+                                                )
+                                            "
+                                            >MORE</a
+                                        >
+                                    </li>
                                 </ul>
                             </article>
                             <article>
-                                <a href="#" class="image"
+                                <a href="javascript:void(0)" class="image"
                                     ><img src="/images/desain.avif" alt=""
                                 /></a>
                                 <h3>Web Development</h3>
@@ -192,11 +236,23 @@
                                     responsif, dan mudah digunakan.
                                 </p>
                                 <ul class="actions">
-                                    <li><a href="#" class="button">More</a></li>
+                                    <li>
+                                        <a
+                                            href="javascript:void(0)"
+                                            class="button"
+                                            onclick="
+                                                openModal(
+                                                    'Web Development',
+                                                    'Pembahasan lengkap mengenai pengembangan website menggunakan HTML, CSS, dan JavaScript, termasuk desain responsif dan optimasi kinerja.',
+                                                )
+                                            "
+                                            >MORE</a
+                                        >
+                                    </li>
                                 </ul>
                             </article>
                             <article>
-                                <a href="#" class="image"
+                                <a href="javascript:void(0)" class="image"
                                     ><img src="/images/flowchart.webp" alt=""
                                 /></a>
                                 <h3>Dasar Algoritma</h3>
@@ -206,7 +262,19 @@
                                     pemecahan masalah.
                                 </p>
                                 <ul class="actions">
-                                    <li><a href="#" class="button">More</a></li>
+                                    <li>
+                                        <a
+                                            href="javascript:void(0)"
+                                            class="button"
+                                            onclick="
+                                                openModal(
+                                                    'Dasar Algoritma',
+                                                    'Pembahasan lengkap mengenai konsep dasar algoritma, kompleksitas waktu dan ruang, serta teknik pemecahan masalah.',
+                                                )
+                                            "
+                                            >MORE</a
+                                        >
+                                    </li>
                                 </ul>
                             </article>
                         </div>
@@ -335,24 +403,51 @@
                 <span class="modal-close" onclick="closeModal()">&times;</span>
                 <h2 id="modalTitle">Judul Modal</h2>
                 <div id="modalBody">
+                    <img
+                        id="modalImage"
+                        src=""
+                        alt="Preview Gambar"
+                        style="
+                            width: 100%;
+                            max-height: 350px;
+                            object-fit: cover;
+                            border-radius: 6px;
+                            margin-bottom: 15px;
+                            display: none;
+                        "
+                    />
                     <p id="modalText">
                         Isi informasi detail akan tampil di sini...
                     </p>
                 </div>
+                <p id="modalText">
+                    Isi informasi detail akan tampil di sini...
+                </p>
             </div>
         </div>
 
         <script>
-            function openModal(title, text) {
+            function openModal(title, text, imgSrc = "") {
                 document.getElementById("modalTitle").innerText = title;
                 document.getElementById("modalText").innerText = text;
+
+                const imgElement = document.getElementById("modalImage");
+                if (imgSrc) {
+                    imgElement.src = imgSrc;
+                    imgElement.style.display = "block";
+                } else {
+                    imgElement.style.display = "none";
+                }
+
                 document.getElementById("customModal").style.display = "flex";
             }
 
+            // Fungsi menutup modal saat tombol (X) diklik
             function closeModal() {
                 document.getElementById("customModal").style.display = "none";
             }
 
+            // Fungsi menutup modal saat klik area latar belakang gelap di luar kotak
             window.onclick = function (event) {
                 const modal = document.getElementById("customModal");
                 if (event.target === modal) {
