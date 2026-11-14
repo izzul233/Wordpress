@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BYTEFORGE – Berita Teknologi Terkini</title>
+<meta name="description" content="BYTEFORGE: berita teknologi, gadget, AI, keamanan siber, dan startup.">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="frame">
+
+<!-- ========== 1. HEADER + HERO ========== -->
+<section class="hero">
+  <header class="topbar">
+    <a href="#" class="logo-notch" aria-label="BYTEFORGE beranda">
+      <span class="logo-mark"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 4h8a4 4 0 0 1 2.4 7.2A4.2 4.2 0 0 1 14 19H5V4Z" stroke="#7CC393" stroke-width="2.4" stroke-linejoin="round"/></svg></span>
+      <span class="logo-text">BYTE<span>FORGE</span></span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Menu utama">
+      <a href="#" class="on">Beranda</a>
+      <a href="#berita" data-go="all">Berita</a>
+      <a href="#berita" data-go="AI">AI</a>
+      <a href="#berita" data-go="Gadget">Gadget</a>
+      <a href="#berita" data-go="Keamanan">Keamanan</a>
+    </nav>
+
+    <div class="cta-notch">
+      <a href="#kontak" class="pill">Hubungi Kami</a>
+      <button type="button" class="circle menu-btn" id="menuBtn" aria-label="Buka menu" aria-expanded="false" aria-controls="nav"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+      <a href="#kontak" class="circle" aria-label="Hubungi kami"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+    </div>
+  </header>
+
+  <div class="hero-body">
+    <h1>Berita Teknologi untuk Mereka yang Selalu Ingin Tahu</h1>
+    <p class="sub">Kabar AI, gadget, keamanan siber, dan startup, dirangkum jelas dan cepat setiap hari.</p>
+    <a href="#berita" class="btn-green">Baca Berita <i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#261B50" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></i></a>
+  </div>
+</section>
+
+<div class="wrap">
+  <main id="berita">
+
+    <!-- ========== 2. BERITA UTAMA ========== -->
+    <div class="sec-head"><h2>Berita Utama</h2></div>
+    <article class="featured">
+      <a href="#" class="thumb t4" aria-label="Baca berita utama"><span class="tag">Gadget</span></a>
+      <div>
+        <div class="meta"><span>Anton Wijaya</span><span>12 Nov 2026</span></div>
+        <h3><a href="#">Laptop ARM Makin Serius: Seberapa Siap Menggantikan Perangkat Kerja Harian?</a></h3>
+        <p>Uji performa, daya tahan baterai, dan kompatibilitas aplikasi pada tiga laptop ARM terbaru untuk pekerja kantoran dan kreator.</p>
+        <a href="#" class="read">Baca selengkapnya →</a>
+      </div>
+    </article>
+
+    <div class="layout">
+      <!-- ========== 3. BERITA TERBARU ========== -->
+      <section aria-label="Berita terbaru">
+        <div class="sec-head" id="terbaru">
+          <h2>Berita Terbaru</h2>
+          <div class="chips" role="group" aria-label="Filter kategori">
+            <button type="button" class="chip on" data-cat="all">Semua</button>
+            <button type="button" class="chip" data-cat="AI">AI</button>
+            <button type="button" class="chip" data-cat="Gadget">Gadget</button>
+            <button type="button" class="chip" data-cat="Keamanan">Keamanan</button>
+            <button type="button" class="chip" data-cat="Startup">Startup</button>
+          </div>
+        </div>
+
+        <div class="grid" id="grid">
+          <article class="card" data-cat="AI"><a href="#" class="thumb"><span class="tag">AI</span></a>
+            <h3><a href="#">Asisten AI di Ruang Redaksi: Membantu atau Menggantikan Wartawan?</a></h3>
+            <p>Sejumlah media mulai memakai AI untuk riset dan transkripsi.</p>
+            <div class="meta"><span>Rina Pratama</span><span>11 Nov 2026</span></div></article>
+
+          <article class="card" data-cat="Gadget"><a href="#" class="thumb t2"><span class="tag">Gadget</span></a>
+            <h3><a href="#">Ulasan Smartwatch Terbaru: Baterai Seminggu, Sensor Lebih Akurat</a></h3>
+            <p>Dipakai 14 hari untuk olahraga, tidur, dan notifikasi harian.</p>
+            <div class="meta"><span>Anton Wijaya</span><span>11 Nov 2026</span></div></article>
+
+          <article class="card" data-cat="Keamanan"><a href="#" class="thumb t3"><span class="tag">Keamanan</span></a>
+            <h3><a href="#">Phishing Lewat Kode QR Meningkat, Kenali Tanda-tandanya</a></h3>
+            <p>Penipuan kini memakai stiker QR palsu di tempat umum.</p>
+            <div class="meta"><span>Dimas Arga</span><span>10 Nov 2026</span></div></article>
+
+          <article class="card" data-cat="Startup"><a href="#" class="thumb t5"><span class="tag">Startup</span></a>
+            <h3><a href="#">Fintech Lokal Rilis Pembayaran Offline untuk Daerah Sinyal Lemah</a></h3>
+            <p>Transaksi tetap berjalan tanpa internet dan tersinkron nanti.</p>
+            <div class="meta"><span>Salsa Nuraini</span><span>10 Nov 2026</span></div></article>
+
+          <article class="card" data-cat="AI"><a href="#" class="thumb t6"><span class="tag">AI</span></a>
+            <h3><a href="#">Cara Menulis Prompt yang Jelas agar Hasil AI Lebih Tepat</a></h3>
+            <p>Lima kebiasaan sederhana untuk jawaban AI yang lebih relevan.</p>
+            <div class="meta"><span>Rina Pratama</span><span>9 Nov 2026</span></div></article>
+
+          <article class="card" data-cat="Gadget"><a href="#" class="thumb t4"><span class="tag">Gadget</span></a>
+            <h3><a href="#">Ponsel Lipat Kelas Menengah Mulai Masuk Pasar Indonesia</a></h3>
+            <p>Harga turun, engsel lebih awet. Sudah waktunya beralih?</p>
+            <div class="meta"><span>Anton Wijaya</span><span>9 Nov 2026</span></div></article>
+
+          <article class="card" data-cat="Keamanan"><a href="#" class="thumb t5"><span class="tag">Keamanan</span></a>
+            <h3><a href="#">Passkey vs Kata Sandi: Mana yang Lebih Aman untuk Akun Harian?</a></h3>
+            <p>Penjelasan sederhana cara kerja passkey dan cara mengaktifkannya.</p>
+            <div class="meta"><span>Dimas Arga</span><span>8 Nov 2026</span></div></article>
+
+          <article class="card" data-cat="Startup"><a href="#" class="thumb t3"><span class="tag">Startup</span></a>
+            <h3><a href="#">Startup Edtech Gandeng Sekolah Daerah untuk Kelas Berbasis AI</a></h3>
+            <p>Program percontohan di tiga provinsi menguji belajar adaptif.</p>
+            <div class="meta"><span>Salsa Nuraini</span><span>7 Nov 2026</span></div></article>
+
+          <article class="card" data-cat="AI"><a href="#" class="thumb t2"><span class="tag">AI</span></a>
+            <h3><a href="#">Chip AI di Laptop: Fitur Nyata atau Sekadar Label?</a></h3>
+            <p>Kami menguji manfaat chip AI untuk pekerjaan sehari-hari.</p>
+            <div class="meta"><span>Rina Pratama</span><span>7 Nov 2026</span></div></article>
+        </div>
+        <p class="empty" id="empty" hidden>Tidak ada berita yang cocok.</p>
+
+        <!-- Pagination: tombolnya dibuat otomatis oleh script.js -->
+        <nav class="pager" id="pager" aria-label="Halaman berita"></nav>
+      </section>
+
+      <!-- ========== 4. SIDEBAR ========== -->
+      <aside aria-label="Sidebar">
+        <div class="box">
+          <form class="search" role="search" id="searchForm">
+            <label for="q" class="sr-only">Cari berita</label>
+            <input type="search" id="q" placeholder="Cari berita…" autocomplete="off">
+            <button type="submit" class="circle" aria-label="Cari"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+          </form>
+        </div>
+
+        <div class="box">
+          <h3>Terpopuler</h3>
+          <ol class="pop">
+            <li><strong>1</strong><a href="#">Update Android terbaru bikin baterai boros?</a></li>
+            <li><strong>2</strong><a href="#">Aplikasi berbahaya yang dihapus dari toko aplikasi</a></li>
+            <li><strong>3</strong><a href="#">Cara mengamankan akun media sosial</a></li>
+          </ol>
+        </div>
+
+        <div class="box">
+          <h3>Kategori</h3>
+          <ul class="cats">
+            <li><a href="#berita" data-go="AI">Kecerdasan Buatan</a></li>
+            <li><a href="#berita" data-go="Gadget">Gadget</a></li>
+            <li><a href="#berita" data-go="Keamanan">Keamanan Siber</a></li>
+            <li><a href="#berita" data-go="Startup">Startup</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- ========== 5. FOOTER ========== -->
+  <footer id="kontak">
+    <div class="fgrid">
+      <div>
+        <div class="logo-text">BYTE<span>FORGE</span></div>
+        <p class="about">Media berita teknologi yang menyajikan kabar jelas dan bisa dipercaya.</p>
+      </div>
+      <div><h4>Rubrik</h4><ul><li><a href="#">AI</a></li><li><a href="#">Gadget</a></li><li><a href="#">Keamanan Siber</a></li><li><a href="#">Startup</a></li></ul></div>
+      <div><h4>Kontak</h4><ul><li>redaksi@byteforge.id</li><li><a href="#">Tentang Kami</a></li><li><a href="#">Redaksi</a></li></ul></div>
+    </div>
+    <div class="copy">© <span id="yr">2026</span> BYTEFORGE. Seluruh hak cipta dilindungi.</div>
+  </footer>
+</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

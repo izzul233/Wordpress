@@ -1,0 +1,170 @@
+/* =========================================================
+   BYTEFORGE – style.css (versi sederhana)
+   1. Warna & reset   2. Header + Hero   3. Berita Utama
+   4. Berita Terbaru  5. Sidebar         6. Footer   7. Responsif
+   ========================================================= */
+
+/* ---------- 1. Warna & reset ---------- */
+:root{
+  --purple:#261B50;      /* warna utama */
+  --purple-2:#352770;
+  --green:#7CC393;       /* warna aksen */
+  --green-d:#4f9d6a;
+  --ink:#1b1536; --muted:#625e7d; --line:#e6e3f0; --tint:#f5f3fb; --bg:#e9e6f4;
+  --r:32px;              /* radius besar */
+  --display:'Sora',system-ui,sans-serif;
+  --body:'DM Sans',system-ui,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);color:var(--ink);background:var(--bg);line-height:1.6;padding:clamp(8px,2vw,24px);overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+svg{display:block;max-width:100%}
+button,input{font:inherit;color:inherit}
+button{cursor:pointer}
+ul,ol{list-style:none}
+:focus-visible{outline:3px solid var(--green);outline-offset:2px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+.frame{max-width:1200px;margin:0 auto;background:#fff;border-radius:40px;padding:14px;box-shadow:0 20px 60px rgba(38,27,80,.15)}
+.wrap{padding:0 clamp(6px,2vw,28px)}
+
+/* elemen yang dipakai ulang */
+.thumb{display:block;position:relative;overflow:hidden;border-radius:20px;aspect-ratio:16/10;background:linear-gradient(135deg,var(--purple-2),var(--purple))}
+.thumb::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 20%,rgba(124,195,147,.55),transparent 45%)}
+.t2{background:linear-gradient(135deg,#1f3b4a,var(--purple))}
+.t3{background:linear-gradient(135deg,var(--green-d),var(--purple-2))}
+.t4{background:linear-gradient(135deg,#6b4fc7,#261B50)}
+.t5{background:linear-gradient(135deg,#2a4d49,#352770)}
+.t6{background:linear-gradient(135deg,#3b2a78,#7CC393)}
+.tag{position:absolute;left:12px;top:12px;z-index:2;background:var(--green);color:var(--purple);font-weight:700;font-size:.74rem;line-height:1;padding:6px 12px;border-radius:99px}
+.meta{display:flex;flex-wrap:wrap;gap:4px 12px;font-size:.82rem;color:var(--muted)}
+.circle{width:44px;height:44px;flex:none;border-radius:50%;background:var(--purple);color:#fff;display:grid;place-items:center;border:0;transition:.2s}
+.circle:hover{background:var(--green);color:var(--purple)}
+
+/* ---------- 2. Header + Hero ---------- */
+.hero{position:relative;color:#fff;background:var(--purple);border-radius:var(--r);
+  background-image:radial-gradient(circle at 88% 8%,rgba(124,195,147,.25),transparent 42%),radial-gradient(circle at 8% 95%,rgba(74,58,143,.9),transparent 50%)}
+.topbar{position:relative;z-index:5;display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:start;gap:8px}
+
+/* kotak putih (notch) untuk logo dan tombol */
+.logo-notch,.cta-notch{position:relative;background:#fff}
+.logo-notch{display:flex;align-items:center;gap:10px;padding:14px 28px 14px 6px;border-bottom-right-radius:var(--r);color:var(--purple)}
+.cta-notch{display:flex;align-items:center;gap:8px;padding:12px 6px 14px 24px;border-bottom-left-radius:var(--r)}
+/* lengkung halus di pertemuan notch dan panel ungu */
+.logo-notch::before,.logo-notch::after,.cta-notch::before,.cta-notch::after{
+  content:"";position:absolute;width:var(--r);height:var(--r);pointer-events:none;
+  background:radial-gradient(circle at 100% 100%,transparent calc(var(--r) - 1px),#fff var(--r))}
+.logo-notch::before{left:100%;top:0}
+.logo-notch::after{left:0;top:100%}
+.cta-notch::before,.cta-notch::after{background:radial-gradient(circle at 0 100%,transparent calc(var(--r) - 1px),#fff var(--r))}
+.cta-notch::before{right:100%;top:0}
+.cta-notch::after{right:0;top:100%}
+
+.logo-mark{width:38px;height:38px;flex:none;border-radius:12px;background:var(--purple);display:grid;place-items:center}
+.logo-text{font-family:var(--display);font-weight:800;font-size:1.05rem;line-height:1;letter-spacing:-.02em;white-space:nowrap}
+.logo-text span{color:var(--green-d)}
+
+.nav{justify-self:center;display:flex;gap:clamp(16px,2.6vw,34px);padding-top:26px;font-weight:500;font-size:.92rem}
+.nav a{opacity:.85;padding:4px 2px;border-bottom:2px solid transparent;transition:.2s}
+.nav a:hover,.nav a.on{opacity:1;border-color:var(--green)}
+
+.pill{background:var(--purple);color:#fff;border-radius:99px;padding:12px 22px;font-weight:700;font-size:.88rem;white-space:nowrap;transition:.2s}
+.pill:hover{background:var(--purple-2)}
+.menu-btn{display:none}
+
+.hero-body{max-width:780px;margin:0 auto;text-align:center;padding:clamp(40px,7vw,90px) 20px clamp(48px,8vw,100px)}
+.hero h1{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,5vw,3.6rem);line-height:1.12;letter-spacing:-.03em;text-wrap:balance}
+.hero .sub{max-width:520px;margin:18px auto 28px;color:#cfc9ea}
+.btn-green{display:inline-flex;align-items:center;gap:12px;background:var(--green);color:var(--purple);padding:8px 8px 8px 24px;border-radius:99px;font-weight:700;transition:.2s}
+.btn-green i{width:38px;height:38px;border-radius:50%;background:#fff;display:grid;place-items:center}
+.btn-green:hover{background:#fff}
+
+/* ---------- 3. Berita Utama ---------- */
+main{padding-top:40px}
+.sec-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 16px;margin-bottom:20px}
+.sec-head h2{font-family:var(--display);font-size:clamp(1.4rem,2.6vw,1.9rem);letter-spacing:-.03em;color:var(--purple)}
+
+.featured{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:28px;align-items:center;margin-bottom:44px}
+.featured>*{min-width:0}
+.featured>.thumb{width:100%;aspect-ratio:4/3}
+.featured h3{font-family:var(--display);font-size:clamp(1.3rem,2.4vw,1.8rem);line-height:1.22;letter-spacing:-.02em;margin:10px 0 12px;color:var(--purple)}
+.featured p{color:var(--muted);margin-bottom:16px}
+.read{font-weight:700;color:var(--purple);border-bottom:3px solid var(--green)}
+.read:hover{color:var(--green-d)}
+
+/* ---------- 4. Berita Terbaru ---------- */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:32px;align-items:start}
+.layout>*{min-width:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{background:#fff;color:var(--purple);border:1.5px solid var(--line);border-radius:99px;padding:7px 16px;font-size:.85rem;font-weight:500;transition:.2s}
+.chip:hover{border-color:var(--purple)}
+.chip.on{background:var(--purple);border-color:var(--purple);color:#fff}
+
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 22px}
+.card[hidden]{display:none}
+.card h3{font-family:var(--display);font-size:1.05rem;line-height:1.35;margin:12px 0 6px;color:var(--purple)}
+.card:hover h3{text-decoration:underline;text-decoration-color:var(--green);text-decoration-thickness:3px;text-underline-offset:4px}
+.card p{font-size:.93rem;color:var(--muted);margin-bottom:8px}
+.empty{padding:32px 20px;text-align:center;background:var(--tint);border-radius:20px;color:var(--muted)}
+.empty[hidden]{display:none}
+
+/* pagination: ‹ 1 2 › */
+.pager{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:40px}
+.pager:empty{display:none}
+.pager button{width:44px;height:44px;display:grid;place-items:center;background:#fff;color:var(--purple);border:1.5px solid var(--line);border-radius:50%;font-weight:700;transition:.2s}
+.pager button:hover:not(:disabled):not(.on){border-color:var(--green)}
+.pager button.on{background:var(--purple);border-color:var(--purple);color:#fff}
+.pager button:disabled{opacity:.35;cursor:not-allowed}
+
+/* ---------- 5. Sidebar ---------- */
+aside{display:grid;gap:20px}
+.box{background:var(--tint);border-radius:26px;padding:22px}
+.box h3{font-family:var(--display);font-size:1.05rem;margin-bottom:14px;color:var(--purple)}
+.search{display:flex;align-items:center;background:#fff;border:1.5px solid var(--line);border-radius:99px;padding:4px}
+.search input{flex:1;min-width:0;border:0;background:none;padding:8px 14px;outline:none}
+.search .circle{width:38px;height:38px}
+.pop{display:grid;gap:14px}
+.pop li{display:flex;gap:14px}
+.pop strong{min-width:24px;font-family:var(--display);font-size:1.4rem;line-height:1;color:var(--green-d)}
+.pop a{font-weight:700;font-size:.92rem;line-height:1.35}
+.pop a:hover,.cats a:hover{color:var(--green-d)}
+.cats a{display:block;padding:9px 0;border-bottom:1px solid var(--line);font-weight:500}
+.cats li:last-child a{border-bottom:0}
+
+/* ---------- 6. Footer ---------- */
+footer{margin:56px 0 6px;padding:clamp(28px,5vw,48px) clamp(20px,4vw,44px) 22px;background:var(--purple);color:#cfc9ea;border-radius:var(--r)}
+.fgrid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:30px}
+.fgrid>*{min-width:0}
+footer h4{margin-bottom:12px;font-family:var(--display);font-size:.95rem;color:#fff}
+footer ul{display:grid;gap:8px;font-size:.92rem}
+footer a:hover{color:var(--green)}
+footer .logo-text{font-size:1.4rem;color:#fff}
+footer .logo-text span{color:var(--green)}
+.about{margin-top:12px;max-width:320px;font-size:.93rem}
+.copy{margin-top:32px;padding-top:18px;border-top:1px solid rgba(255,255,255,.14);font-size:.84rem}
+
+/* ---------- 7. Responsif ---------- */
+@media(max-width:900px){
+  /* menu jadi dropdown supaya tidak bertabrakan dengan logo dan tombol */
+  .menu-btn{display:grid}
+  .nav{display:none;position:absolute;left:14px;right:14px;top:calc(100% + 10px);z-index:10;flex-direction:column;gap:6px;padding:14px;background:var(--purple-2);border-radius:22px;box-shadow:0 20px 40px rgba(0,0,0,.4)}
+  .nav.open{display:flex}
+  .nav a{padding:10px 12px;border:0;border-radius:12px}
+  .nav a:hover,.nav a.on{background:rgba(255,255,255,.1)}
+  .cta-notch{grid-column:3}
+  .layout{grid-template-columns:minmax(0,1fr)}
+}
+@media(max-width:700px){
+  .frame{border-radius:28px;padding:10px}
+  .featured,.grid{grid-template-columns:minmax(0,1fr)}
+  .fgrid{grid-template-columns:1fr}
+}
+@media(max-width:520px){
+  :root{--r:26px}
+  .cta-notch .pill{display:none}
+  .cta-notch{padding-left:16px}
+  .logo-notch{padding-right:20px}
+  .box{padding:18px}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
