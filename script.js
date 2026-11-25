@@ -1,12 +1,5 @@
-/* =========================================================
-   BYTEFORGE – script.js (versi sederhana)
-   Fitur:
-   1. Menu mobile
-   2. Filter kategori + pencarian + pagination
-   3. Tahun footer
-   ========================================================= */
 
-/* ---------- 1. Menu mobile ---------- */
+/* ---------- Menu mobile ---------- */
 var nav = document.getElementById('nav');
 var menuBtn = document.getElementById('menuBtn');
 
@@ -19,7 +12,7 @@ document.addEventListener('click', function (e) {
   if (!nav.contains(e.target)) nav.classList.remove('open');
 });
 
-/* ---------- 2. Filter + pencarian + pagination ---------- */
+/* ---------- Filter + pencarian + pagination ---------- */
 var cards = document.querySelectorAll('#grid .card');
 var chips = document.querySelectorAll('.chip');
 var input = document.getElementById('q');
@@ -33,7 +26,7 @@ var halaman = 1;
 function tampilkan() {
   var kata = input.value.trim().toLowerCase();
 
-  // 1) kumpulkan kartu yang cocok dengan kategori DAN kata kunci
+  // kumpulkan kartu yang cocok dengan kategori DAN kata kunci
   var cocok = [];
   cards.forEach(function (card) {
     var okKategori = kategori === 'all' || card.dataset.cat === kategori;
@@ -41,19 +34,19 @@ function tampilkan() {
     if (okKategori && okKata) cocok.push(card);
   });
 
-  // 2) hitung total halaman, lalu ambil kartu untuk halaman ini
+  // hitung total halaman, lalu ambil kartu untuk halaman ini
   var totalHalaman = Math.max(1, Math.ceil(cocok.length / PER_HALAMAN));
   if (halaman > totalHalaman) halaman = totalHalaman;
   var mulai = (halaman - 1) * PER_HALAMAN;
   var tampil = cocok.slice(mulai, mulai + PER_HALAMAN);
 
-  // 3) tampilkan / sembunyikan kartu
+  // tampilkan / sembunyikan kartu
   cards.forEach(function (card) {
     card.hidden = tampil.indexOf(card) === -1;
   });
   empty.hidden = cocok.length > 0;
 
-  // 4) tandai tombol kategori yang aktif
+  // tandai tombol kategori yang aktif
   chips.forEach(function (c) {
     c.classList.toggle('on', c.dataset.cat === kategori);
   });
@@ -61,7 +54,7 @@ function tampilkan() {
   buatPager(totalHalaman);
 }
 
-// Membuat tombol ‹ 1 2 ›
+// buat tombol ‹ 1 2 ›
 function buatPager(total) {
   pager.innerHTML = '';
   if (total <= 1) return;   // satu halaman saja: pagination disembunyikan
@@ -103,7 +96,7 @@ chips.forEach(function (c) {
   c.addEventListener('click', function () { pilihKategori(c.dataset.cat); });
 });
 
-// Menu atas dan kategori di sidebar (atribut data-go)
+// Menu atas dan kategori di sidebar
 document.querySelectorAll('[data-go]').forEach(function (a) {
   a.addEventListener('click', function () {
     input.value = '';
@@ -125,5 +118,5 @@ document.getElementById('searchForm').addEventListener('submit', function (e) {
 
 tampilkan();   // tampilan awal
 
-/* ---------- 3. Tahun footer ---------- */
+/* ---------- Tahun footer ---------- */
 document.getElementById('yr').textContent = new Date().getFullYear();
